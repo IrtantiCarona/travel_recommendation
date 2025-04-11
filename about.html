@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carona Travel</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-gradient-to-r from-gray-800 to-gray-900 p-4 text-white">
+    <div class="container mx-auto flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10.9 2.3c.8-.2 1.6.1 2.2.7l8 8c.8.8.8 2.1 0 2.8l-8 8c-.6.6-1.4.9-2.2.7s-1.4-.7-1.6-1.5l-.5-2.1-2.4-2.4-2.1-.5c-.8-.2-1.3-.8-1.5-1.6s.1-1.6.7-2.2l8-8c.6-.6 1.4-.9 2.2-.7z"/></svg>
+        <span class="font-bold text-xl">TravelBloom</span>
+      </div>
+
+      <!-- Hamburger menu button -->
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <i data-feather="menu"></i>
+      </button>
+
+      <!-- Menu Items -->
+      <div id="menu" class="hidden md:flex space-x-4 items-center">
+        <a href="index.html" class="hover:text-teal-400">Home</a>
+        <a href="about.html" class="hover:text-teal-400">About Us</a>
+        <a href="contact.html" class="hover:text-teal-400">Contact Us</a>
+
+        <!-- Search bar -->
+        <div class="flex items-center bg-white rounded-full overflow-hidden shadow-md ml-4">
+          <input type="text" placeholder="Enter a destination or keyword" id="userInput" class="px-3 py-1 text-black outline-none w-48 sm:w-64">
+          <button class="text-gray-700 px-2 hover:bg-gray-400" id="searchBtn">Search</button>
+          <button class="text-gray-700 px-2 hover:bg-gray-400" id="resetBtn">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu (Dropdown) -->
+    <div id="mobile-menu" class="md:hidden hidden flex-col space-y-3 mt-3 px-4">
+      <a href="index.html" class="hover:text-teal-400">Home</a>
+      <a href="about.html" class="hover:text-teal-400">About Us</a>
+      <a href="contact.html" class="hover:text-teal-400">Contact Us</a>
+      <div class="flex flex-col bg-white p-3 rounded-lg shadow-md">
+        <input type="text" placeholder="Enter a destination or keyword" id="userInput" class="mb-2 px-3 py-1 text-black rounded border border-gray-300 outline-none">
+        <div class="flex gap-2">
+          <button class="text-gray px-3 py-1 rounded hover:bg-gray-400" id="searchBtn">Search</button>
+          <button class="text-gray-700 px-3 py-1 rounded hover:bg-gray-400" id="resetBtn">Reset</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="relative bg-cover bg-center text-white py-16" style="background-image: url('img/nyc.jpg');">
+    <div class="bg-black/60 absolute inset-0"></div>
+    <div class="relative z-10 max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-4xl font-extrabold mb-6">ABOUT US</h2>
+      <p class="text-lg leading-relaxed max-w-3xl mx-auto mb-8">
+        <strong>Welcome to Our Company!</strong> We are a team of passionate individuals dedicated to providing excellent services and products to our customers.
+        <br />
+        Our mission is to <span class="font-semibold">provide the best experience</span> for people traveling to different destinations around the world.
+        <br />
+        Our values include integrity, innovation, customer satisfaction, and teamwork.
+        <br />
+        We believe in <span class="font-semibold">putting our customers first</span> and working together to achieve our goals.
+      </p>
+      <p class="text-base">Feel free to explore our website to learn more about what we offer.</p>
+    </div>
+  </section>
+  
+  <section class="py-16 bg-white text-center">
+    <h3 class="text-3xl font-bold mb-10">Our <span class="text-teal-600">Team</span></h3>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
+      <!-- Card 1 -->
+      <div class="bg-white shadow-lg p-6 rounded-lg border border-gray-200">
+        <h4 class="text-xl font-semibold mb-2">John Doe</h4>
+        <p class="text-sm text-gray-500 mb-4">CEO</p>
+        <p class="text-sm text-gray-600">John leads the entire operation and sets the vision of the company.</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="bg-white shadow-lg p-6 rounded-lg border border-gray-200">
+        <h4 class="text-xl font-semibold mb-2">Celina Thomas</h4>
+        <p class="text-sm text-gray-500 mb-4">Team Lead</p>
+        <p class="text-sm text-gray-600">Celina is responsible for leading our creative and development teams.</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="bg-white shadow-lg p-6 rounded-lg border border-gray-200">
+        <h4 class="text-xl font-semibold mb-2">Mike Tyson</h4>
+        <p class="text-sm text-gray-500 mb-4">Delivery Head</p>
+        <p class="text-sm text-gray-600">Mike ensures that services are delivered effectively and on time.</p>
+      </div>
+    </div>
+  </section>
+  
+    <!-- Social Icons -->
+    <div class="absolute bottom-6 left-6 flex flex-col space-y-4 z-10">
+      <a href="#" class="hover:text-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M22.23 5.924a8.717 8.717 0 0 1-2.506.687 4.345 4.345 0 0 0 1.902-2.396 8.59 8.59 0 0 1-2.73 1.043A4.288 4.288 0 0 0 16.616 4a4.293 4.293 0 0 0-4.292 4.29c0 .338.038.666.111.98A12.174 12.174 0 0 1 3.088 4.97a4.293 4.293 0 0 0 1.327 5.723 4.28 4.28 0 0 1-1.944-.537v.053a4.294 4.294 0 0 0 3.444 4.21 4.283 4.283 0 0 1-1.94.073 4.294 4.294 0 0 0 4.007 2.98 8.607 8.607 0 0 1-5.33 1.84c-.346 0-.687-.02-1.022-.06A12.146 12.146 0 0 0 8.29 21c7.875 0 12.182-6.525 12.182-12.18 0-.185-.004-.37-.012-.554a8.726 8.726 0 0 0 2.15-2.22l.002-.003Z" />
+        </svg>
+      </a>
+      <a href="#" class="hover:text-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2.163c3.204 0 3.584.012 4.849.07 1.366.062 2.633.343 3.608 1.319.975.975 1.257 2.242 1.319 3.608.058 1.265.07 1.645.07 4.84s-.012 3.574-.07 4.84c-.062 1.366-.343 2.633-1.319 3.608-.975.975-2.242 1.257-3.608 1.319-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.343-3.608-1.319-.975-.975-1.257-2.242-1.319-3.608C2.175 15.575 2.163 15.195 2.163 12s.012-3.574.07-4.84c.062-1.366.343-2.633 1.319-3.608.975-.975 2.242-1.257 3.608-1.319 1.265-.058 1.645-.07 4.849-.07Zm0 1.837c-3.139 0-3.502.012-4.737.068-1.18.054-1.82.248-2.243.41a4.403 4.403 0 0 0-1.59 1.038 4.403 4.403 0 0 0-1.038 1.59c-.162.423-.356 1.063-.41 2.243-.056 1.235-.068 1.598-.068 4.737s.012 3.502.068 4.737c.054 1.18.248 1.82.41 2.243.226.59.552 1.126 1.038 1.59.464.464 1 .81 1.59 1.038.423.162 1.063.356 2.243.41 1.235.056 1.598.068 4.737.068s3.502-.012 4.737-.068c1.18-.054 1.82-.248 2.243-.41a4.403 4.403 0 0 0 1.59-1.038 4.403 4.403 0 0 0 1.038-1.59c.162-.423.356-1.063.41-2.243.056-1.235.068-1.598.068-4.737s-.012-3.502-.068-4.737c-.054-1.18-.248-1.82-.41-2.243a4.403 4.403 0 0 0-1.038-1.59 4.403 4.403 0 0 0-1.59-1.038c-.423-.162-1.063-.356-2.243-.41-1.235-.056-1.598-.068-4.737-.068Zm0 3.398a6.439 6.439 0 1 1 0 12.878 6.439 6.439 0 0 1 0-12.878Zm0 1.837a4.602 4.602 0 1 0 0 9.204 4.602 4.602 0 0 0 0-9.204Zm6.406-.918a1.497 1.497 0 1 1-2.994 0 1.497 1.497 0 0 1 2.994 0Z" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <script>
+    feather.replace(); // Feather icons
+    const toggleBtn = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+
+    toggleBtn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>

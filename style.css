@@ -1,0 +1,49 @@
+/* Custom Scrollable Result Box */
+#results {
+    max-height: 500px; /* Kamu bisa adjust tinggi maksimalnya */
+    overflow-y: auto;
+  }
+  
+  /* Optional: Scrollbar styling (buat kelihatan cakep) */
+  #results::-webkit-scrollbar {
+    width: 8px;
+  }
+  #results::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+  }
+  #results::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+.result-item button {
+    padding: 10px 25px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.result-item {
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.result-item h2 {
+    padding-left: 10px;
+}
+
+.result-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.result-item p {
+    padding-left: 10px;
+}
+
+.result-item a {
+    padding-left: 10px;
+}
